@@ -1,0 +1,11 @@
+{
+    "video": false,
+    "defaultCommandTimeout": 5000,
+    "pageLoadTimeout": 6000,
+    "ignoreTestFiles": [
+        "*.js",
+        "*.md"
+    ],
+    "browser": "chrome",
+    "chromePath": "C:\\Program Files\\Google\\Chrome\\Application"
+}

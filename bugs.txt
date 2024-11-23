@@ -1,0 +1,42 @@
+HOME PAGE - Link Watch Video leads to nowhere
+    1. Visit Home page - https://mind-wend-913065.framer.app/
+    2. Click on "WATCH VIDEO"
+
+    Current Result
+        No video is played
+
+    Expected Result
+        Video starts in video player window
+
+    Attachments
+        https://app.birdeatsbug.com/ObvddHzU0-RtLQcNZ9G6zt-vsLq7UaLWr9K0Lm9pYnMU?detailsHidden=false
+
+
+HOME PAGE - Many types of components section - VISIT button not active
+    1. Visit Home page - https://mind-wend-913065.framer.app/
+    2. Scroll down to section "Many types of components to customize"
+    3. Click VISIT button on any of the tiles on the left
+
+    Current Result
+        Clicking the button leads to nowhere
+
+    Expected Result
+        Clicking the button should lead to the correct page
+
+    Attachments
+        https://app.birdeatsbug.com/BtzIFboqtC8RWFCkYfMb16LVRcGyWt-ZpBGAwyRFEMEa
+
+
+HOME PAGE - Many types of components section - LEARN MORE button not active
+    1. Visit Home page - https://mind-wend-913065.framer.app/
+    2. Scroll down to section "Many types of components to customize"
+    3. Click LEARN MORE button on any of the tiles on the left
+
+    Current Result
+        Clicking the button leads to nowhere
+
+    Expected Result
+        Clicking the button should lead to the correct page
+
+    Attachments
+        https://app.birdeatsbug.com/GMM8ol5L9mVcjjyWHRT8bUwjHZkG6ZzmVIymipkc4-5X
