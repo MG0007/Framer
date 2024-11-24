@@ -51,14 +51,18 @@ Then('I see the visit button is displayed on each card in the Many types of comp
     columns.forEach((column, index) =>{
         if(index !== 0 && index !== columns.length - 1){
             const cards = column.get('[name="Card"]').children()
-            cards.forEach((card) =>{
-                card.get('[name="Card"] div[data-border="true"][name="Button"]').contains('Visit')
-            })
+            if(cards.length > 0){
+                cards.forEach((card) =>{
+                    card.get('[name="Card"] div[data-border="true"][name="Button"]').contains('Visit')
+                })
+            }            
 
             const cardsSmall = column.get('[name="Card Small"]').children()
-            cardsSmall.forEach((card)=>{
-                card.get('[name="Card Small"] div[data-border="true"][name="Button"]').contains('Visit')
-            })
+            if(cardsSmall.length > 0){
+                cardsSmall.forEach((card)=>{
+                    card.get('[name="Card Small"] div[data-border="true"][name="Button"]').contains('Visit')
+                })
+            }
         }
     })
 })
