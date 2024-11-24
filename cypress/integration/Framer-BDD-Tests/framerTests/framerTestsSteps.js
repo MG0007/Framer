@@ -1,8 +1,14 @@
 import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps'
 
-Cypress.on('uncaught:exception', (err, runnable) =>{
-    return false;
+beforeEach(()=>{
+    Cypress.on('uncaught:exception', (err, runnable) =>{
+        return false;
+    })    
 })
+
+// Cypress.on('uncaught:exception', (err, runnable) =>{
+//     return false;
+// })
 
 Given('the Framer site is loaded', ()=>{
     cy.visit('https://mind-wend-913065.framer.app/');
@@ -27,4 +33,14 @@ Then("I see the products currency symbol is displayed as $ in Pricing page", () 
             sign.should('have.text', '$');
         });
     })
+})
+
+When('I scroll to Many types of components to customize in the components page', ()=>{
+    cy.get('div.framer-1892sln p span').first()
+    .invoke('show')
+    .trigger('mouseover')
+    .click({ force: true });
+
+    cy.get('div.framer-1lz646s h2 span.framer-text').scrollTo('right')
+    cy.get('div.framer-1lz646s h2 span.framer-text').should('be.visible').and('have.text', 'Many types of components to customize');
 })
