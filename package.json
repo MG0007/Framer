@@ -12,6 +12,6 @@
     "@types/node": "^22.9.3"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^11.1.0"
+    "@cucumber/cucumber": "^9.0.1"
   }
 }
