@@ -1,0 +1,1 @@
+To execute the tests in Cucumber open a new Terminal, change directory to WITHPLAYWRIGHT and execute: npx cucuber-js --exit

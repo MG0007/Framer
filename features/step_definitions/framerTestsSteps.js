@@ -28,7 +28,9 @@ Given('the Framer site is loaded', async () => {
     const tile30 = await page.getByText('Basic plan$30/moBilled');
     const tile45 = await page.getByText('Pro plan$45/moBilled');
 
-    expect(tile15.textContent()).toContain('$');
+    const tile15Text = (tile15 + ' h2 span').textContent().toContain('$');
+
+    // expect((tile15 + ' h2 span').textContent()).toContain('$');
     expect(tile30.textContent()).toContain('$');
     expect(tile45.textContent()).toContain('$');
   });
