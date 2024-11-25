@@ -2,6 +2,7 @@ import { Given, When, Then, Before } from  "@cucumber/cucumber";
 import { expect } from  "@playwright/test";
 import { chromium } from "@playwright/test";
 
+
 Before(async () =>{
     global.browser = await chromium.launch({headless: false});
   
@@ -18,14 +19,16 @@ Given('the Framer site is loaded', async () => {
 
   When('I see the Pricing page', async () => {
     const text = await page.locator('div.framer-1xy1tag h1 span').textContent();
-    page.pause();
-    await page.locator('div.framer-1xy1tag h1 span').toContainText('Pricing');
+    expect(text).toContain('Pricing');
   });
 
   Then('I see the products currency symbol is displayed as $ in Pricing page', async () => {
-    const tiles = await page.locator('div.pricing-container').locator('div');
-    tiles.forEach((tile) => {
-       const text = page.locator(tile + ' h2 span').textContent();
-       expect(text[0]).toHaveText('$');
-    });
+    
+    const tile15 = await page.getByText('Free plan$15/moUp to 3');
+    const tile30 = await page.getByText('Basic plan$30/moBilled');
+    const tile45 = await page.getByText('Pro plan$45/moBilled');
+
+    expect(tile15.textContent()).toContain('$');
+    expect(tile30.textContent()).toContain('$');
+    expect(tile45.textContent()).toContain('$');
   });
