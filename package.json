@@ -2,13 +2,14 @@
   "name": "withplaywright",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.49.0",
+    "@playwright/test": "^1.19.1",
     "@types/node": "^22.9.3"
   },
   "dependencies": {
